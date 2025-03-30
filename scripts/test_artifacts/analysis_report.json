@@ -1,0 +1,122 @@
+[
+  {
+    "file": "cppcheck_report.txt",
+    "line": 20,
+    "keyword": "error",
+    "threat": "Generic Error",
+    "cwe": "N/A",
+    "line_text": "Cppcheck Errors:"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 36,
+    "keyword": "error",
+    "threat": "Generic Error",
+    "cwe": "N/A",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:213:48: error: va_list 'args' was opened but not closed by va_end(). [va_end_missing]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 39,
+    "keyword": "error",
+    "threat": "Generic Error",
+    "cwe": "N/A",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:221:51: error: va_list 'args' was opened but not closed by va_end(). [va_end_missing]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 42,
+    "keyword": "error",
+    "threat": "Generic Error",
+    "cwe": "N/A",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:232:55: error: va_list 'args' was opened but not closed by va_end(). [va_end_missing]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 48,
+    "keyword": "error",
+    "threat": "Generic Error",
+    "cwe": "N/A",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:249:33: error: Null pointer dereference: np [nullPointer]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 57,
+    "keyword": "error",
+    "threat": "Generic Error",
+    "cwe": "N/A",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:249:33: error: Null pointer dereference [nullPointer]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 69,
+    "keyword": "overflow",
+    "threat": "Buffer Overflow",
+    "cwe": "CWE-120: Classic Buffer Overflow",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:10: error: Signed integer overflow for expression '1<<(bs-1)'. [integerOverflow]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 69,
+    "keyword": "error",
+    "threat": "Generic Error",
+    "cwe": "N/A",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:10: error: Signed integer overflow for expression '1<<(bs-1)'. [integerOverflow]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 75,
+    "keyword": "overflow",
+    "threat": "Buffer Overflow",
+    "cwe": "CWE-120: Classic Buffer Overflow",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:10: note: Integer overflow"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 78,
+    "keyword": "overflow",
+    "threat": "Buffer Overflow",
+    "cwe": "CWE-120: Classic Buffer Overflow",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:21: error: Signed integer overflow for expression '(1<<(bs-1))+1'. [integerOverflow]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 78,
+    "keyword": "error",
+    "threat": "Generic Error",
+    "cwe": "N/A",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:21: error: Signed integer overflow for expression '(1<<(bs-1))+1'. [integerOverflow]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 84,
+    "keyword": "overflow",
+    "threat": "Buffer Overflow",
+    "cwe": "CWE-120: Classic Buffer Overflow",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:21: note: Integer overflow"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 90,
+    "keyword": "error",
+    "threat": "Generic Error",
+    "cwe": "N/A",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/iar/startup_ewarm.c:97:44: error: syntax error: \".intvec\" = [syntaxError]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 132,
+    "keyword": "overflow",
+    "threat": "Buffer Overflow",
+    "cwe": "CWE-120: Classic Buffer Overflow",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:185:0: style: The function 'vApplicationStackOverflowHook' is never used. [unusedFunction]"
+  },
+  {
+    "file": "cppcheck_report.txt",
+    "line": 138,
+    "keyword": "assert",
+    "threat": "Assertion Failure",
+    "cwe": "N/A",
+    "line_text": "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:232:0: style: The function 'vAssertCalled' is never used. [unusedFunction]"
+  }
+]

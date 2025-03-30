@@ -1,0 +1,152 @@
+----- Analysis of /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC -----
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/IntQueueTimer.c ...
+1/8 files checked 4% done
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/RegTest.c ...
+2/8 files checked 12% done
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c ...
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c: TEST_PRINTF...
+3/8 files checked 22% done
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/startup_gcc.c ...
+4/8 files checked 30% done
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/iar/startup_ewarm.c ...
+5/8 files checked 40% done
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c ...
+6/8 files checked 60% done
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c ...
+7/8 files checked 76% done
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_full.c ...
+8/8 files checked 100% done
+
+Cppcheck Errors:
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:96:15: style: The scope of the variable 't' can be reduced. [variableScope]
+ register int t, neg = 0, pc = 0;
+              ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:114:23: warning: Either the condition 'u' is redundant or there is division by zero at line 114. [zerodivcond]
+  t = (unsigned int)u % b;
+                      ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:113:9: note: Assuming that condition 'u' is not redundant
+ while (u) {
+        ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:118:8: note: Assignment to 'u/=b'
+  u /= b;
+       ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:114:23: note: Division by zero
+  t = (unsigned int)u % b;
+                      ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:213:48: error: va_list 'args' was opened but not closed by va_end(). [va_end_missing]
+        return tiny_print( 0, format, args, 0 );
+                                               ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:221:51: error: va_list 'args' was opened but not closed by va_end(). [va_end_missing]
+        return tiny_print( &out, format, args, 0 );
+                                                  ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:232:55: error: va_list 'args' was opened but not closed by va_end(). [va_end_missing]
+        return tiny_print( &buf, format, args, count );
+                                                      ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:255:2: warning: %u in format string (no. 2) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+ printf("signed %d = unsigned %u = hex %x\n", -3, -3, -3);
+ ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:249:33: error: Null pointer dereference: np [nullPointer]
+ printf("%s is null pointer\n", np);
+                                ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:240:13: note: Assignment 'np=0', assigned value is 0
+ char *np = 0;
+            ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:249:33: note: Null pointer dereference
+ printf("%s is null pointer\n", np);
+                                ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:249:33: error: Null pointer dereference [nullPointer]
+ printf("%s is null pointer\n", np);
+                                ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:10: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+ mi = (1 << (bs-1)) + 1;
+         ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:242:31: note: Assignment 'bs=sizeof(int)*8', assigned value is 32
+ unsigned int bs = sizeof(int)*8;
+                              ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:10: note: Shift
+ mi = (1 << (bs-1)) + 1;
+         ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:10: error: Signed integer overflow for expression '1<<(bs-1)'. [integerOverflow]
+ mi = (1 << (bs-1)) + 1;
+         ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:242:31: note: Assignment 'bs=sizeof(int)*8', assigned value is 32
+ unsigned int bs = sizeof(int)*8;
+                              ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:10: note: Integer overflow
+ mi = (1 << (bs-1)) + 1;
+         ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:21: error: Signed integer overflow for expression '(1<<(bs-1))+1'. [integerOverflow]
+ mi = (1 << (bs-1)) + 1;
+                    ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:242:31: note: Assignment 'bs=sizeof(int)*8', assigned value is 32
+ unsigned int bs = sizeof(int)*8;
+                              ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:246:21: note: Integer overflow
+ mi = (1 << (bs-1)) + 1;
+                    ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/startup_gcc.c:100:68: style: Parameter 'pulFaultStackAddress' can be declared with const [constParameter]
+__attribute__( ( used ) ) void prvGetRegistersFromStack( uint32_t *pulFaultStackAddress )
+                                                                   ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/iar/startup_ewarm.c:97:44: error: syntax error: ".intvec" = [syntaxError]
+__root const uVectorEntry __vector_table[] @ ".intvec" =
+                                           ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:235:23: style: The scope of the variable 'ulSetToNonZeroInDebuggerToContinue' can be reduced. [variableScope]
+    volatile uint32_t ulSetToNonZeroInDebuggerToContinue = 0;
+                      ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_full.c:373:42: style: Parameter 'pvParameters' can be declared with const [constParameter]
+static void prvRegTestTaskEntry1( void * pvParameters )
+                                         ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_full.c:391:42: style: Parameter 'pvParameters' can be declared with const [constParameter]
+static void prvRegTestTaskEntry2( void * pvParameters )
+                                         ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:318:0: style: The function '__write' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_full.c:146:0: style: The function 'main_full' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:342:0: style: The function 'malloc' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/startup_gcc.c:100:0: style: The function 'prvGetRegistersFromStack' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:225:0: style: The function 'snprintf' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:221:0: style: The function 'vApplicationDaemonTaskStartupHook' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:260:0: style: The function 'vApplicationGetIdleTaskMemory' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:287:0: style: The function 'vApplicationGetTimerTaskMemory' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:171:0: style: The function 'vApplicationIdleHook' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:147:0: style: The function 'vApplicationMallocFailedHook' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:185:0: style: The function 'vApplicationStackOverflowHook' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:203:0: style: The function 'vApplicationTickHook' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:232:0: style: The function 'vAssertCalled' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_full.c:340:0: style: The function 'vFullDemoTickHookFunction' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/IntQueueTimer.c:73:0: style: The function 'vInitialiseTimerForIntQueueTest' is never used. [unusedFunction]
+
+^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:305:0: style: The function 'write' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
+
