@@ -6,27 +6,16 @@
  * https://github.com/FreeRTOS
  */
 
-/******************************************************************************
- * Modified main.c: Integrated concurrency tasks (SensorTask & SecureNetworkTask)
- * plus real-time performance checks.
- * 
- * Threat Model (Condensed):
- *  1) Buffer Overflow: Use boundary checks in SecureNetworkTask.
- *  2) Race Condition: Use a mutex in SensorTask for shared data.
- *  3) DoS (CPU hog / RT violation): Keep tasks short, use priorities/timeouts,
- *     and now measure ticks to detect missed deadlines.
- *  4) Unauthorized Access: Not fully shown here; typically restrict debug or config.
- *****************************************************************************/
-
-/* FreeRTOS includes. */
 #include "FreeRTOS.h"
 #include "task.h"
 #include "semphr.h"
 
-/* Standard includes. */
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
+
+/* Added for random delay logic. */
+#include <stdlib.h>
 
 /* TraceRecorder includes (if used). */
 #include <trcRecorder.h>
@@ -39,7 +28,6 @@
 #define UART0_BAUDDIV         ( *( ( volatile uint32_t * ) ( UART0_ADDRESS + 16UL ) ) )
 #define TX_BUFFER_MASK        ( 1UL )
 
-/* Forward declarations for local functions. */
 static void prvUARTInit( void );
 static void vSensorTask( void *pvParameters );
 static void vSecureNetworkTask( void *pvParameters );
@@ -48,8 +36,6 @@ static void vSecureNetworkTask( void *pvParameters );
 static uint16_t sSensorData = 0;
 static SemaphoreHandle_t xSensorMutex = NULL;
 
-/*-----------------------------------------------------------*/
-
 int main( void )
 {
 #if ( configUSE_TRACE_FACILITY == 1 )
@@ -57,6 +43,9 @@ int main( void )
     xTraceEnable( TRC_START );
     xTraceTimestampSetPeriod(configCPU_CLOCK_HZ / configTICK_RATE_HZ);
 #endif
+
+    /* Initialize random seed (if desired). In real embedded code, you might do a fixed seed. */
+    srand(1);  /* or srand(time(NULL)); if you have time() available */
 
     /* Basic hardware init for UART so printf() goes to QEMU stdio. */
     prvUARTInit();
@@ -76,6 +65,67 @@ int main( void )
     for( ;; );
     return 0;
 }
+
+/* Minimal check to see if a packet looks like MQTT. */
+static int isMqttPacket(const uint8_t *data, size_t length)
+{
+    /* A valid MQTT Control Packet has at least 2 bytes:
+       - byte[0] = Control Packet type/flags
+       - byte[1..n] = Remaining length (using variable-length encoding).
+     */
+    if (length < 2)
+    {
+        return 0;
+    }
+
+    /* Extract control packet type from bits 7..4.  MQTT valid range is 1..14. */
+    uint8_t controlPacketType = (data[0] & 0xF0) >> 4;
+    if (controlPacketType < 1 || controlPacketType > 14)
+    {
+        return 0; /* Not a valid MQTT type. */
+    }
+
+    /* Now parse the variable-length "Remaining Length" field. */
+    size_t offset = 1;        /* Start after the first byte (Control Packet type). */
+    size_t remainingLength = 0;
+    int shift = 0;
+
+    while (1)
+    {
+        /* If we've run out of buffer before finishing "Remaining Length", it's invalid. */
+        if (offset >= length)
+        {
+            return 0; 
+        }
+
+        uint8_t encodedByte = data[offset++];
+        remainingLength += (encodedByte & 0x7F) << shift;
+        shift += 7;
+
+        /* If MSB is 0, we finished reading the Remaining Length. */
+        if ((encodedByte & 0x80) == 0)
+        {
+            break;
+        }
+
+        /* MQTT spec says Remaining Length can be up to 4 bytes. If we exceed that, error out. */
+        if (shift > 28)
+        {
+            return 0;  /* Malformed (very large) Remaining Length. */
+        }
+    }
+
+    /* We’ve parsed the "Remaining Length". Check if the buffer has enough data. */
+    if (remainingLength > (length - offset))
+    {
+        return 0;  /* The stated Remaining Length doesn't fit in the provided packet data. */
+    }
+
+    /* If we got here, it’s minimally valid for MQTT. */
+    return 1;
+}
+
+
 /*-----------------------------------------------------------*
  *  Task & Function Definitions
  *-----------------------------------------------------------*/
@@ -103,7 +153,7 @@ static void vSensorTask( void *pvParameters )
         }
     }
 
-    /* Let's run this task periodically every 100ms */
+    /* Periodic task: every 100ms => 10 times/second => ~50 times in 5 seconds. */
     const TickType_t xPeriod = pdMS_TO_TICKS(100);
     TickType_t xNextWakeTime = xTaskGetTickCount();
 
@@ -124,11 +174,21 @@ static void vSensorTask( void *pvParameters )
 
         printf("SensorTask: sSensorData=%u\n", sSensorData);
 
+        /* -------------------------------
+         *  Randomly force extra delay ~1/50 chance
+         *  => ~once every 5 seconds for SensorTask
+         * ------------------------------- */
+        if ((rand() % 50) == 0)
+        {
+            /* Enough delay to exceed a 5-tick threshold. */
+            vTaskDelay(pdMS_TO_TICKS(60));  // ~6 ticks at 10 ms/tick
+        }
+
         /* End timing and compute the difference. */
         TickType_t endTime = xTaskGetTickCount();
         TickType_t diff = endTime - startTime;
 
-        /* If we took more than 5 ticks, consider that a missed 'soft deadline'. */
+        /* If we took more than 5 ticks, consider that a missed deadline. */
         if (diff > 5)
         {
             printf("SensorTask: MISSED DEADLINE (took %u ticks)\n", (unsigned)diff);
@@ -143,13 +203,22 @@ static void vSensorTask( void *pvParameters )
 /* A mock function simulating network driver input. */
 static int getIncomingPacket(uint8_t *buffer, size_t bufferSize)
 {
-    /* For demonstration, we might do:
-       1) Zero bytes => no data
-       2) Some random or test pattern
-       In real code, read from a queue or QEMU-based UART, etc.
-    */
+    // Example: Fake an MQTT CONNECT packet of length 14 just for testing
+    // (Control packet type = 1 (CONNECT), Remaining Length = 12)
+    if (bufferSize >= 14)
+    {
+        buffer[0] = 0x10; // bits 7..4 = 1 (CONNECT)
+        buffer[1] = 12;   // Remaining length
+        // Fill the rest with dummy payload...
+        for (int i = 2; i < 14; i++)
+        {
+            buffer[i] = (uint8_t)i;
+        }
+        return 14; // bytes read
+    }
     return 0;
 }
+
 
 /* Basic boundary checks + real-time measure in "SecureNetworkTask". */
 static void handlePacket(const uint8_t *data, size_t length)
@@ -166,8 +235,21 @@ static void handlePacket(const uint8_t *data, size_t length)
         return;
     }
 
+    /* Existing logging. */
     printf("NetTask: Got packetType=%u, payloadLen=%u\n", packetType, payloadLen);
+
+    /* --- MQTT MINIMAL CHECK ADDITION --- */
+    if (isMqttPacket(data, length))
+    {
+        printf("NetTask: Detected a minimal valid MQTT packet!\n");
+        /* Optionally do deeper MQTT processing here... */
+    }
+    else
+    {
+        /* Non-MQTT or invalid structure. Handle as usual or ignore. */
+    }
 }
+
 
 static void vSecureNetworkTask( void *pvParameters )
 {
@@ -175,7 +257,7 @@ static void vSecureNetworkTask( void *pvParameters )
 
     static uint8_t netBuffer[256];
 
-    /* Suppose NetTask runs every 10ms. */
+    /* NetTask runs every 10ms => 100 times/second => ~500 times in 5 seconds. */
     const TickType_t xPeriod = pdMS_TO_TICKS(10);
     TickType_t xNextWakeTime = xTaskGetTickCount();
 
@@ -190,11 +272,21 @@ static void vSecureNetworkTask( void *pvParameters )
         if (bytesRead > 0)
         {
             if ((size_t)bytesRead < sizeof(netBuffer))
+            {
                 netBuffer[bytesRead] = '\0';
+            }
             else
+            {
                 netBuffer[sizeof(netBuffer) - 1] = '\0';
+            }
 
             handlePacket(netBuffer, bytesRead);
+        }
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
         }
 
         /* End timing. */
@@ -213,9 +305,11 @@ static void vSecureNetworkTask( void *pvParameters )
     }
 }
 
+
 /*-----------------------------------------------------------*
- *  FreeRTOS Hook Implementations (same as before)
+ *  FreeRTOS Hook Implementations
  *-----------------------------------------------------------*/
+
 void vApplicationMallocFailedHook( void )
 {
     printf( "\r\n\r\nMalloc failed\r\n" );
@@ -232,6 +326,11 @@ void vApplicationStackOverflowHook( TaskHandle_t pxTask, char * pcTaskName )
     printf( "\r\n\r\nStack overflow in %s\r\n", pcTaskName );
     portDISABLE_INTERRUPTS();
     for( ; ; );
+}
+
+void SampleOverflowIssue(int x) // Unused function to detect
+{
+    (void)x;
 }
 
 void vApplicationTickHook( void ) { }
@@ -282,7 +381,6 @@ void vApplicationGetTimerTaskMemory( StaticTask_t ** ppxTimerTaskTCBBuffer,
     *pulTimerTaskStackSize = configTIMER_TASK_STACK_DEPTH;
 }
 
-/* Basic UART init for QEMU stdio. */
 static void prvUARTInit( void )
 {
     UART0_BAUDDIV = 16;
@@ -301,11 +399,14 @@ int __write( int iFile, char * pcString, int iStringLength )
     return iStringLength;
 }
 
-/* We do not expect calls to malloc() from the C library, so guard them. */
-void * malloc( size_t size )
+void *malloc(size_t size)
 {
-    ( void ) size;
-    printf( "\r\n\r\nUnexpected call to malloc() - use pvPortMalloc()\r\n" );
-    portDISABLE_INTERRUPTS();
-    for( ; ; );
+    /* Wrap library malloc to FreeRTOS allocation. */
+    return pvPortMalloc(size);
+}
+
+void free(void *ptr)
+{
+    /* Likewise wrap free to FreeRTOS deallocation. */
+    vPortFree(ptr);
 }

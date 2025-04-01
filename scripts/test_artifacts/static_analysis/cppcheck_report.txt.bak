@@ -12,8 +12,18 @@ Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/ia
 5/8 files checked 41% done
 Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c ...
 6/8 files checked 58% done
-c
-t = (unsigned int)u % b;                      ^
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_blinky.c ...
+7/8 files checked 75% done
+Checking /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main_full.c ...
+8/8 files checked 100% done
+
+Cppcheck Errors:
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:96:15: style: The scope of the variable 't' can be reduced. [variableScope]
+ register int t, neg = 0, pc = 0;
+              ^
+/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:114:23: warning: Either the condition 'u' is redundant or there is division by zero at line 114. [zerodivcond]
+  t = (unsigned int)u % b;
+                      ^
 /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/build/gcc/printf-stdarg.c:113:9: note: Assuming that condition 'u' is not redundant
  while (u) {
         ^

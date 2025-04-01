@@ -1,5 +1,83 @@
 scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
-make: Nothing to be done for 'all'.
+/usr/share/clang/scan-build-14/bin/../libexec/ccc-analyzer -ffreestanding -mthumb -mcpu=cortex-m3 -Wall -Wextra -Wshadow -Wno-unused-value -g3 -Os -ffunction-sections -fdata-sections -MMD -MP -MF"output/main.d" -MT output/main.o -I/home/arampour/FreeRTOS-Kernel/include -I/home/arampour/FreeRTOS-Kernel/portable/GCC/ARM_CM3 -I/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC -I/home/arampour/FreeRTOS/FreeRTOS/Demo/Common/include -I/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC -I/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/CMSIS -I/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig -I/home/arampour/FreeRTOS/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/TraceRecorderSource/include  -I/home/arampour/FreeRTOS/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/TraceRecorderSource/kernelports/FreeRTOS/include -I/home/arampour/FreeRTOS/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/TraceRecorderSource/streamports/RingBuffer/include -c /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c -o output/main.o
 scan-build: Analysis run complete.
-scan-build: Removing directory '/tmp/scan-build-2025-03-15-142045-406890-1' because it contains no reports.
+scan-build: Removing directory '/tmp/scan-build-2025-03-31-195951-10888-1' because it contains no reports.
 scan-build: No bugs found.
+Scan-Build Errors:
+clang: warning: argument unused during compilation: '-mthumb' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-mcpu=cortex-m3' [-Wunused-command-line-argument]
+In file included from /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:9:
+In file included from /home/arampour/FreeRTOS-Kernel/include/FreeRTOS.h:108:
+In file included from /home/arampour/FreeRTOS-Kernel/include/portable.h:53:
+/home/arampour/FreeRTOS-Kernel/portable/GCC/ARM_CM3/portmacro.h:218:9: error: unknown use of instruction mnemonic without a size suffix
+        "   mov %0, %1                                              \n" \
+        ^
+<inline asm>:1:5: note: instantiated into assembly here
+           mov %eax, $4                                              
+           ^
+In file included from /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:9:
+In file included from /home/arampour/FreeRTOS-Kernel/include/FreeRTOS.h:108:
+In file included from /home/arampour/FreeRTOS-Kernel/include/portable.h:53:
+/home/arampour/FreeRTOS-Kernel/portable/GCC/ARM_CM3/portmacro.h:219:10: error: invalid instruction mnemonic 'msr'
+        "   msr basepri, %0                                         \n" \
+         ^
+<inline asm>:2:4: note: instantiated into assembly here
+   msr basepri, %eax                                         
+   ^~~
+In file included from /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:9:
+In file included from /home/arampour/FreeRTOS-Kernel/include/FreeRTOS.h:108:
+In file included from /home/arampour/FreeRTOS-Kernel/include/portable.h:53:
+/home/arampour/FreeRTOS-Kernel/portable/GCC/ARM_CM3/portmacro.h:220:10: error: invalid instruction mnemonic 'isb'
+        "   isb                                                     \n" \
+         ^
+<inline asm>:3:4: note: instantiated into assembly here
+   isb                                                     
+   ^~~
+In file included from /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:9:
+In file included from /home/arampour/FreeRTOS-Kernel/include/FreeRTOS.h:108:
+In file included from /home/arampour/FreeRTOS-Kernel/include/portable.h:53:
+/home/arampour/FreeRTOS-Kernel/portable/GCC/ARM_CM3/portmacro.h:221:10: error: invalid instruction mnemonic 'dsb'
+        "   dsb                                                     \n" \
+         ^
+<inline asm>:4:4: note: instantiated into assembly here
+   dsb                                                     
+   ^~~
+In file included from /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:9:
+In file included from /home/arampour/FreeRTOS-Kernel/include/FreeRTOS.h:108:
+In file included from /home/arampour/FreeRTOS-Kernel/include/portable.h:53:
+/home/arampour/FreeRTOS-Kernel/portable/GCC/ARM_CM3/portmacro.h:218:9: error: unknown use of instruction mnemonic without a size suffix
+        "   mov %0, %1                                              \n" \
+        ^
+<inline asm>:1:5: note: instantiated into assembly here
+           mov %eax, $4                                              
+           ^
+In file included from /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:9:
+In file included from /home/arampour/FreeRTOS-Kernel/include/FreeRTOS.h:108:
+In file included from /home/arampour/FreeRTOS-Kernel/include/portable.h:53:
+/home/arampour/FreeRTOS-Kernel/portable/GCC/ARM_CM3/portmacro.h:219:10: error: invalid instruction mnemonic 'msr'
+        "   msr basepri, %0                                         \n" \
+         ^
+<inline asm>:2:4: note: instantiated into assembly here
+   msr basepri, %eax                                         
+   ^~~
+In file included from /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:9:
+In file included from /home/arampour/FreeRTOS-Kernel/include/FreeRTOS.h:108:
+In file included from /home/arampour/FreeRTOS-Kernel/include/portable.h:53:
+/home/arampour/FreeRTOS-Kernel/portable/GCC/ARM_CM3/portmacro.h:220:10: error: invalid instruction mnemonic 'isb'
+        "   isb                                                     \n" \
+         ^
+<inline asm>:3:4: note: instantiated into assembly here
+   isb                                                     
+   ^~~
+In file included from /home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/main.c:9:
+In file included from /home/arampour/FreeRTOS-Kernel/include/FreeRTOS.h:108:
+In file included from /home/arampour/FreeRTOS-Kernel/include/portable.h:53:
+/home/arampour/FreeRTOS-Kernel/portable/GCC/ARM_CM3/portmacro.h:221:10: error: invalid instruction mnemonic 'dsb'
+        "   dsb                                                     \n" \
+         ^
+<inline asm>:4:4: note: instantiated into assembly here
+   dsb                                                     
+   ^~~
+8 errors generated.
+make: *** [Makefile:149: output/main.o] Error 1
+

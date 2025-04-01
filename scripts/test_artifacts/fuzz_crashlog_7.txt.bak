@@ -1,0 +1,1276 @@
+=== STDOUT ===
+Starting FreeRTOS with integrated Sensor & Network tasks in main.c (with RT checks)
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=0
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=1
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=2
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=3
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=4
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=5
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=6
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=7
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=8
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=9
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=10
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=11
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=12
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=13
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=14
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=15
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=16
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=17
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=18
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=19
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=20
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=21
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=22
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=23
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=24
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=25
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=26
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=27
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=28
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=29
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=30
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=31
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=32
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=33
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=34
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=35
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=36
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=37
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+SensorTask: sSensorData=38
+SensorTask: took 0 ticks
+NetTask: MISSED DEADLINE (took 60 ticks)
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+
+=== STDERR ===

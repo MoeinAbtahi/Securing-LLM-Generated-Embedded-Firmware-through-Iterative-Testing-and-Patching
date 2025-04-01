@@ -1,0 +1,4806 @@
+=== STDOUT ===
+Starting FreeRTOS with integrated Sensor & Network tasks in main.c (with RT checks)
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=0
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=1
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=2
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=3
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=4
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=5
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=6
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=7
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=8
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=9
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=10
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=11
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=12
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=13
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=14
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=15
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=16
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=17
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=18
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=19
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=20
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=21
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=22
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=23
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=24
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=25
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=26
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=27
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=28
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=29
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=30
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=31
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=32
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=33
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=34
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=35
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=36
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=37
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+c
+static void vSecureNetworkTask( void *pvParameters )
+{
+    (void) pvParameters;
+
+    static uint8_t netBuffer[256];
+
+    /* NetTask runs every 10ms => 100 times/second => ~500 times in 5 seconds. */
+    const TickType_t xPeriod = pdMS_TO_TICKS(10);
+    TickType_t xNextWakeTime = xTaskGetTickCount();
+
+    for (;;)
+    {
+        vTaskDelayUntil(&xNextWakeTime, xPeriod);
+
+        /* Start timing. */
+        TickType_t startTime = xTaskGetTickCount();
+
+        int bytesRead = getIncomingPacket(netBuffer, sizeof(netBuffer));
+        if (bytesRead > 0)
+        {
+            if ((size_t)bytesRead < sizeof(netBuffer))
+            {
+                netBuffer[bytesRead] = '\0';
+            }
+            else
+            {
+                netBuffer[sizeof(netBuffer) - 1] = '\0';
+            }
+
+            handlePacket(netBuffer, bytesRead);
+        }
+
+        /* End timing. */
+        TickType_t endTime = xTaskGetTickCount();
+        TickType_t diff = endTime - startTime;
+
+        /* If we took > 5 ticks for a 10ms task, log a missed deadline. */
+        if (diff > 5)
+        {
+            printf("NetTask: MISSED DEADLINE (took %u ticks)\n", (unsigned)diff);
+        }
+        else
+        {
+            /* Random delay to simulate missed-deadline scenario. */
+            if ((rand() % 500) == 0)
+            {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+
+            printf("NetTask: took %u ticks\n", (unsigned)diff);
+        }
+    }
+}NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=39
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=40
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=41
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=42
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=43
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=44
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+SensorTask: sSensorData=45
+SensorTask: took 0 ticks
+NetTask: MISSED DEADLINE (took 60 ticks)
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=46
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=47
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+NetTask: Detected a minimal valid MQTT packet!
+NetTask: took 0 ticks
+SensorTask: sSensorData=48
+SensorTask: took 0 ticks
+NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}NetTask: Got packetType=16, payloadLen=12
+c
+/* SensorTask: concurrency (mutex) + real-time check. */
+static void vSensorTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 50) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks at 10 ms/tick
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+
+/* Basic boundary checks + real-time measure in "SecureNetworkTask". */
+static void vSecureNetworkTask( void *pvParameters )
+{
+    // ... existing code ...
+
+    for (;;)
+    {
+        // ... existing code ...
+
+        /* Random delay to simulate missed-deadline scenario. */
+        if ((rand() % 500) == 0)
+        {
+            TickType_t remainingTime = xPeriod - diff;
+            if (remainingTime > pdMS_TO_TICKS(60)) {
+                vTaskDelay(pdMS_TO_TICKS(60)); // ~6 ticks
+            }
+        }
+
+        // ... existing code ...
+    }
+}
+=== STDERR ===

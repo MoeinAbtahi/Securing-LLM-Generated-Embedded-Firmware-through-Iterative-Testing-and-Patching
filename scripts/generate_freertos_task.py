@@ -26,7 +26,6 @@ We have identified the following threats:
 1) Buffer Overflows
 2) Race Conditions
 3) Denial of Service
-4) Unauthorized Access
 We want a FreeRTOS-based network parsing task that mitigates buffer overflow 
 via boundary checks, logs suspicious inputs, and uses minimal blocking calls 
 to avoid DoS. The code should be in C.

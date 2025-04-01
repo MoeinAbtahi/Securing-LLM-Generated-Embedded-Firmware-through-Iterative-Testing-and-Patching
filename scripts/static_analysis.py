@@ -13,6 +13,7 @@ Usage:
 
 import os
 import subprocess
+import shutil
 
 SOURCE_PATHS = [
     "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC",
@@ -21,6 +22,19 @@ SOURCE_PATHS = [
 
 # Directory to store static analysis logs
 STATIC_OUT_DIR = "test_artifacts/static_analysis"
+
+def clear_old_static_logs():
+    """
+    Removes old static analysis logs (e.g., .txt, .log) from STATIC_OUT_DIR 
+    before running a new static analysis.
+    """
+    if os.path.isdir(STATIC_OUT_DIR):
+        for fname in os.listdir(STATIC_OUT_DIR):
+            if fname.endswith(".txt") or fname.endswith(".log"):
+                os.remove(os.path.join(STATIC_OUT_DIR, fname))
+    else:
+        print(f"[INFO] Directory '{STATIC_OUT_DIR}' does not exist; no old logs to clear.")
+
 
 def run_cppcheck():
     print("Running Cppcheck analysis...\n")
@@ -76,6 +90,8 @@ def run_clang_static_analyzer():
     print(f"Clang scan-build results saved to: {scanbuild_log}")
 
 def main():
+    clear_old_static_logs()
+
     # Use whichever analyzers you prefer
     run_cppcheck()
     run_clang_static_analyzer()

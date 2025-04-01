@@ -20,6 +20,7 @@ import json
 # Directory where fuzz logs and static analysis logs are stored
 TEST_ARTIFACTS_DIR = "test_artifacts"
 FUZZ_PREFIX = "fuzz_crashlog_"
+FUZZ_PATTERNS = ("fuzz_crashlog_", "fuzz_freezelog_")
 STATIC_ANALYSIS_DIR = "static_analysis"
 
 # Map keywords to threats & CWE IDs
@@ -59,7 +60,15 @@ THREAT_KEYWORDS = {
     "error": {
         "threat": "Generic Error",
         "cwe": "N/A"
-    }
+    },
+    "malloc failed": {
+        "threat": "Memory Allocation Failure",
+        "cwe": "CWE-401: Memory Leak or Resource Exhaustion"
+    },
+    "freeze": {
+        "threat": "Potential Freeze/Hang",
+        "cwe": "CWE-400: Uncontrolled Resource Consumption"
+     }
 }
 
 def parse_file_for_threats(filepath):
@@ -87,7 +96,7 @@ def parse_file_for_threats(filepath):
         for keyword, info in THREAT_KEYWORDS.items():
             if keyword in line_lower:
                 vulnerabilities.append({
-                    "file": os.path.basename(filepath),
+                    "file": os.path.abspath(filepath),
                     "line": i + 1,
                     "keyword": keyword,
                     "threat": info["threat"],
@@ -104,7 +113,7 @@ def analyze_fuzz_logs(results):
         return
 
     for fname in os.listdir(TEST_ARTIFACTS_DIR):
-        if fname.startswith(FUZZ_PREFIX) and fname.endswith(".txt"):
+        if fname.endswith(".txt") and any(fname.startswith(p) for p in FUZZ_PATTERNS):
             full_path = os.path.join(TEST_ARTIFACTS_DIR, fname)
             vulns = parse_file_for_threats(full_path)
             results.extend(vulns)

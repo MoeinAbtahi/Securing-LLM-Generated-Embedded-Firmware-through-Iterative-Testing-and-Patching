@@ -44,7 +44,7 @@ def run_qemu():
         "-M", "mps2-an385",
         "-kernel", QEMU_KERNEL,
         "-serial", "mon:stdio",
-        "-nographic"
+        "-nographic",
     ]
 
     print(f"Running QEMU with kernel: {QEMU_KERNEL}\n")

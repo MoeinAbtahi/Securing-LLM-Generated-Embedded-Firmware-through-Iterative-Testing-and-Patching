@@ -14,6 +14,7 @@ import os
 import random
 import subprocess
 import time
+import shutil
 
 # If you want to automatically build first, set to True and update the path:
 AUTO_BUILD = False
@@ -25,6 +26,21 @@ FIRMWARE_PATH = "/home/arampour/FreeRTOS/FreeRTOS/Demo/CORTEX_MPS2_QEMU_IAR_GCC/
 # Directory to store fuzz inputs and logs
 TEST_ARTIFACTS_DIR = "test_artifacts"
 NUM_ITERATIONS = 10
+
+def clear_old_logs():
+    """
+    Removes old fuzz logs and input files from test_artifacts/ before
+    starting a new fuzz test run.
+    """
+    if os.path.isdir(TEST_ARTIFACTS_DIR):
+        for fname in os.listdir(TEST_ARTIFACTS_DIR):
+            # Remove old fuzz inputs and logs
+            if (fname.startswith("fuzz_crashlog_") or
+                fname.startswith("fuzz_freezelog_") or
+                fname.startswith("fuzz_input_")):
+                os.remove(os.path.join(TEST_ARTIFACTS_DIR, fname))
+    else:
+        print(f"[INFO] Directory '{TEST_ARTIFACTS_DIR}' does not exist; no old logs to clear.")
 
 def build_firmware_if_needed():
     """
@@ -50,16 +66,12 @@ def create_random_data(max_size=512):
 
 def fuzz_once(iteration):
     """
-    1. Generate random input.
-    2. Launch QEMU, pass data to the firmware.
-    3. Capture output for anomalies, store logs in test_artifacts/.
+    1. Generate random input
+    2. Launch QEMU
+    3. Check output only for 'Deadline Missed'
     """
     fuzz_data = create_random_data()
 
-    # Ensure the artifacts directory exists
-    os.makedirs(TEST_ARTIFACTS_DIR, exist_ok=True)
-
-    # Save the fuzz input for reference
     input_filename = os.path.join(TEST_ARTIFACTS_DIR, f"fuzz_input_{iteration}.bin")
     with open(input_filename, "wb") as f:
         f.write(fuzz_data)
@@ -68,10 +80,14 @@ def fuzz_once(iteration):
 
     qemu_cmd = [
         "qemu-system-arm",
-        "-M", "mps2-an385",
-        "-kernel", FIRMWARE_PATH,
-        "-serial", "stdio",
-        "-nographic"
+        "-machine", "mps2-an385",            # MPS2-AN385 board
+        "-cpu", "cortex-m3",                # Explicitly select the CPU core
+        "-kernel", FIRMWARE_PATH,           # Your firmware ELF/AXF/OUT
+        "-monitor", "none",                 # Disable QEMU monitor
+        "-nographic",                       # No graphical window
+        "-semihosting",                     # Enable semihosting
+        "-semihosting-config", "enable=on,target=native", 
+        "-serial", "stdio"                  # Send UART output to stdio
     ]
 
     proc = subprocess.Popen(
@@ -83,26 +99,33 @@ def fuzz_once(iteration):
     )
 
     try:
+        # If your firmware doesn't actually read from stdin,
+        # passing fuzz_data won't matter. But let's keep it:
+        #out, err = proc.communicate("HelloX", timeout = 5)  # for instance
+        number = random.randint(1, 5)
         out, err = proc.communicate(
             input=fuzz_data.decode('latin-1', errors='ignore'),
-            timeout=5
+            timeout=number
         )
     except subprocess.TimeoutExpired:
-        print(f"[Iteration {iteration}] QEMU timed out. Potential freeze/DoS scenario.")
+        #print(f"[Iteration {iteration}] QEMU timed out. Potential freeze.")
         proc.kill()
         out, err = proc.communicate()
 
-    # Look for anomaly keywords
-    anomalies = []
-    triggers = ["overflow", "assert", "hard fault", "malloc failed", "crash", "stack overflow", "error"]
+        # Create a separate freeze log
+        #freeze_log_filename = os.path.join(TEST_ARTIFACTS_DIR, f"fuzz_freezelog_{iteration}.txt")
+        #with open(freeze_log_filename, "w") as lf:
+        #    lf.write(f"[Iteration {iteration}] QEMU freeze or timeout detected.\n")
+        #    lf.write("=== STDOUT ===\n")
+        #    lf.write(out)
+        #    lf.write("\n=== STDERR ===\n")
+
+    # We only look for "Deadline Missed"
     out_lower = out.lower()
     err_lower = err.lower()
-    for trig in triggers:
-        if trig in out_lower or trig in err_lower:
-            anomalies.append(trig)
-
-    if anomalies:
-        print(f"[Iteration {iteration}] Detected anomalies: {anomalies}")
+    #print(out_lower)
+    if "missed deadline" in out_lower or "missed deadline" in err_lower:
+        print(f"[Iteration {iteration}] Detected missed deadline!")
         log_filename = os.path.join(TEST_ARTIFACTS_DIR, f"fuzz_crashlog_{iteration}.txt")
         with open(log_filename, "w") as lf:
             lf.write("=== STDOUT ===\n")
@@ -110,10 +133,13 @@ def fuzz_once(iteration):
             lf.write("\n=== STDERR ===\n")
             lf.write(err)
     else:
-        print(f"[Iteration {iteration}] No anomalies detected.")
+        print(f"[Iteration {iteration}] No missed deadline detected.")
+
 
 def main():
     build_firmware_if_needed()
+
+    clear_old_logs()
 
     for i in range(NUM_ITERATIONS):
         time.sleep(1)  # small delay between runs
